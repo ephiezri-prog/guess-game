@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><body style="font-family:sans-serif;text-align:center;padding:40px">
+<h1>נחש מספר 1–100</h1>
+<input id="g" type="number"><button onclick="check()">נחש</button>
+<p id="r"></p>
+<script>
+let n=Math.floor(Math.random()*100)+1, t=0;
+function check(){
+  let g=+document.getElementById('g').value; t++;
+  document.getElementById('r').textContent =
+    g===n ? `🎉 נכון! ${t} ניסיונות` : g<n ? 'גבוה יותר ⬆️' : 'נמוך יותר ⬇️';
+}
+</script></body></html>
